@@ -87,7 +87,7 @@ export default function Home() {
 
             <div className="paper-list">
               <article className="paper-entry">
-                <div className="paper-visual clivis-visual" aria-hidden="true"><small>CVPR · 2026</small><strong>CLiViS</strong><span>Cognitive map<br />+ evidence memory</span><i className="node-one" /><i className="node-two" /><i className="node-three" /></div>
+                <figure className="paper-visual"><img src="/clivis-overview.png" alt="CLiViS framework overview showing cognitive maps, evidence memory, and integrated reasoning" /></figure>
                 <div className="paper-copy">
                   <div className="paper-badges"><span>CVPR 2026</span><em>First Author</em></div>
                   <h3>CLiViS: Unleashing Cognitive Map through Linguistic-Visual Synergy for Embodied Visual Reasoning</h3>
@@ -102,7 +102,7 @@ export default function Home() {
               </article>
 
               <article className="paper-entry">
-                <div className="paper-visual hsgm-visual" aria-hidden="true"><small>CVPR · 2026</small><strong>HSGM</strong><span>2D semantics<br />× 3D geometry</span><i className="layer-one" /><i className="layer-two" /><i className="layer-three" /></div>
+                <figure className="paper-visual"><img src="/hsgm-overview.png" alt="HSGM framework overview showing semantic, geometric, and decision maps for navigation" /></figure>
                 <div className="paper-copy">
                   <div className="paper-badges"><span>CVPR 2026</span><em>First Author</em></div>
                   <h3>Bridging the 2D-3D Gap: A Hierarchical Semantic-Geometric Map for Vision Language Navigation</h3>
@@ -125,11 +125,11 @@ export default function Home() {
             </header>
             <div className="experience-list">
               <article>
-                <div className="company-mark tencent-mark">T</div>
+                <div className="company-logo"><img src="/tencent-logo.svg" alt="Tencent" /></div>
                 <div className="experience-copy"><div className="experience-heading"><div><h3>Tencent Rhino-Bird Elite Talent Program</h3><p>Game VLA Foundation Models Research</p></div><time>May 2026 — Present</time></div><p>Researching long-context Game VLA under memory and latency constraints, including learnable visual-memory compression and recurrent online updates.</p><div className="topic-tags"><span>Game VLA</span><span>Visual Memory</span><span>Online Updates</span></div></div>
               </article>
               <article>
-                <div className="company-mark bosch-mark">B</div>
+                <div className="company-logo"><img src="/bosch-logo.svg" alt="Bosch" /></div>
                 <div className="experience-copy"><div className="experience-heading"><div><h3>Bosch Corporate Research</h3><p>Vision-Language Navigation &amp; Autonomous-Driving VLA</p></div><time>Jun 2025 — Mar 2026</time></div><p>Developed a hierarchical semantic-geometric mapping approach for VLN, published at CVPR 2026, and contributed to autonomous cruising and parking research without HD maps.</p><div className="topic-tags"><span>Zero-shot VLN</span><span>3D Mapping</span><span>Autonomous Parking</span></div></div>
               </article>
             </div>
