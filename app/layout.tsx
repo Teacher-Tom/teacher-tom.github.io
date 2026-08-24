@@ -4,7 +4,7 @@ import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const siteUrl = "https://kailing-li-research-portfolio.teachertom.chatgpt.site";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kailing-li-research-portfolio.teachertom.chatgpt.site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
