@@ -1,3 +1,5 @@
+import { homeUrl, siteUrl } from "./site";
+
 const interests = [
   { number: "01", title: "Embodied AI & Visual Reasoning", text: "Multimodal agents that perceive, reason, remember, and act in complex embodied environments." },
   { number: "02", title: "Vision-Language Navigation", text: "Instruction following, 3D spatial reasoning, and semantic-geometric mapping for zero-shot navigation." },
@@ -14,10 +16,34 @@ const awards = [
 ];
 
 const navItems = [["Biography", "#biography"], ["Publications", "#publications"], ["Internship", "#internship"], ["Awards", "#awards"]];
+const profileStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${homeUrl}#profile`,
+  url: homeUrl,
+  name: "李锴凌 (Kailing Li) | Academic Homepage",
+  description: "Academic profile of Kailing Li, an embodied AI researcher at East China Normal University.",
+  dateCreated: "2026-08-24",
+  dateModified: "2026-08-24",
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${homeUrl}#person`,
+    name: "Kailing Li",
+    alternateName: ["李锴凌", "Teacher-Tom"],
+    url: homeUrl,
+    image: `${siteUrl}/profile.jpg`,
+    jobTitle: "M.Sc. Candidate and Embodied AI Researcher",
+    affiliation: { "@type": "CollegeOrUniversity", name: "East China Normal University" },
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Hohai University" },
+    sameAs: ["https://github.com/Teacher-Tom", "https://scholar.google.com/citations?user=LuCZXUwAAAAJ"],
+    knowsAbout: ["Embodied AI", "Vision-Language Navigation", "Vision-Language-Action Models", "Game VLA", "Video Understanding"],
+  },
+};
 
 export default function Home() {
   return (
     <div className="site-shell">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileStructuredData) }} />
       <a className="skip-link" href="#main-content">Skip to content</a>
 
       <header className="topbar">
