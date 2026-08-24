@@ -13,7 +13,7 @@ const awards = [
   ["2020-2024", "Outstanding Student, Outstanding Communist Youth League Member, and Academic Excellence Scholarship"],
 ];
 
-const navItems = [["Biography", "#biography"], ["Research", "#research"], ["Publications", "#publications"], ["Internship", "#internship"], ["Awards", "#awards"]];
+const navItems = [["Biography", "#biography"], ["Publications", "#publications"], ["Internship", "#internship"], ["Awards", "#awards"]];
 
 export default function Home() {
   return (
@@ -70,30 +70,19 @@ export default function Home() {
               <span className="section-number">01</span>
             </header>
             <div className="biography-copy">
-              <p className="lead">I explore how multimodal agents can understand visual experience, reason about space, retain useful memory, and take grounded actions.</p>
               <p>I am an M.Sc. candidate in Computer Science and Technology at <strong>East China Normal University</strong>, after earning a B.E. in Software Engineering from <strong>Hohai University</strong>. My research focuses on embodied intelligence, especially vision-language navigation, Game VLA, and video understanding.</p>
               <p>I have published <strong>two first-author papers at CVPR 2026</strong> and conducted research through the Tencent Rhino-Bird Elite Talent Program and at Bosch Corporate Research.</p>
             </div>
-            <div className="research-summary">
-              <span>Current focus</span>
-              <p>Long-context multimodal agents that bridge visual perception, structured memory, spatial reasoning, and action.</p>
-            </div>
-          </section>
-
-          <section className="content-card" id="research">
-            <header className="section-title">
-              <div><span>Topics</span><h2>Research Interests</h2></div>
-              <span className="section-number">02</span>
-            </header>
-            <div className="interest-list">
-              {interests.map((item) => <article key={item.number}><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}
+            <div className="compact-interests" id="research">
+              <span>Research Interests</span>
+              <div>{interests.map((item) => <span key={item.number}>{item.title}</span>)}</div>
             </div>
           </section>
 
           <section className="content-card publications-card" id="publications">
             <header className="section-title section-title-row">
               <div><span>Peer-reviewed only</span><h2>Publications</h2></div>
-              <a href="https://scholar.google.com/citations?user=LuCZXUwAAAAJ" target="_blank" rel="noreferrer">Full list on Scholar ↗</a>
+              <div className="section-title-aside"><a href="https://scholar.google.com/citations?user=LuCZXUwAAAAJ" target="_blank" rel="noreferrer">Full list on Scholar ↗</a><span className="section-number">02</span></div>
             </header>
 
             <div className="paper-list">
@@ -132,7 +121,7 @@ export default function Home() {
           <section className="content-card" id="internship">
             <header className="section-title">
               <div><span>Industry research</span><h2>Internship</h2></div>
-              <span className="section-number">04</span>
+              <span className="section-number">03</span>
             </header>
             <div className="experience-list">
               <article>
@@ -149,7 +138,7 @@ export default function Home() {
           <section className="content-card" id="awards">
             <header className="section-title">
               <div><span>Recognition</span><h2>Honors &amp; Awards</h2></div>
-              <span className="section-number">05</span>
+              <span className="section-number">04</span>
             </header>
             <div className="award-list">{awards.map(([year, title]) => <article key={year + title}><time>{year}</time><p>{title}</p></article>)}</div>
           </section>
