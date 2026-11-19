@@ -19,3 +19,4 @@ main{min-width:0}.content-card{margin-bottom:22px;padding:34px 38px;border:1px s
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important}}
 @media print{.topbar,.profile-links,.paper-links{display:none}.academic-layout{display:block;width:100%;margin:0}.profile-card{position:static;box-shadow:none}.content-card{break-inside:avoid;box-shadow:none}.paper-entry{break-inside:avoid}body{background:#fff}}
 main,.paper-copy,.experience-copy{min-width:0}.paper-copy h3,.biography-copy p,.experience-copy p{overflow-wrap:anywhere}
+.paper-entry--text{grid-template-columns:minmax(0,1fr)}
